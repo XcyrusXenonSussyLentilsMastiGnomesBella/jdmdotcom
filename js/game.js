@@ -80,12 +80,14 @@ class Game{
          this.ctx.lineWidth=1;
          this.ctx.fillText("You won!", this.ctx.canvas.width/2, this.ctx.canvas.height/2);
          this.ctx.strokeText("You won!", this.ctx.canvas.width/2, this.ctx.canvas.height/2);
+         
          this.started=false;
          return;
       }
       this.currentLevel++;
       this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
       this.drawPaths(this.levels[this.currentLevel]);
+      doGameOver();
    }
 
    drawPaths(paths) {
