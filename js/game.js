@@ -78,9 +78,7 @@ class Game{
          this.ctx.textAlign="center";
          this.ctx.textBaseline="middle";
          this.ctx.lineWidth=1;
-         this.ctx.fillText("You won!", this.ctx.canvas.width/2, this.ctx.canvas.height/2);
-         this.ctx.strokeText("You won!", this.ctx.canvas.width/2, this.ctx.canvas.height/2);
-         
+         doGameOver();
          this.started=false;
          return;
       }
